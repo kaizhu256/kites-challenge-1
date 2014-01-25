@@ -36,8 +36,6 @@
       override.socks5SshHost = override.socks5SshHost || process.env.SOCKS5_SSH_HOST;
       /* require utility2 */
       require('utility2');
-      /* require kites */
-      required.kite = require('./lib/index.js');
       /* print debug info */
       EXPORTS.debugAppOnce();
       /* auto jslint / eval / etc ... for the following files if modified */
@@ -143,13 +141,29 @@
     _name: 'test_application.moduleTestServerNodejs',
 
     _init: function () {
+      if (!state.isNodejs) {
+        return;
+      }
       EXPORTS.initModule(module, local);
     },
 
-    'routerFileDict_/lib/kite.js': function (request, response) {
+    _initOnce: function () {
+      /* require kites */
+      required.kites = require('./lib/index.js');
+    },
+
+    _initTest: function () {
+      EXPORTS.deferCallback('untilPhantomjsServerReady', 'defer', function (error) {
+        if (!error) {
+          EXPORTS.testLocal(local);
+        }
+      });
+    },
+
+    'routerFileDict_/lib/kites.js': function (request, response) {
       /* this function serves the file test_application.js */
       EXPORTS.serverRespondDefault(response, 200, 'application/javascript; charset=utf-8',
-        required.kite._fileContentBrowser);
+        required.kites._fileContentBrowser);
     },
 
     'routerFileDict_/test_application.js': function (request, response) {
@@ -158,7 +172,7 @@
         required.test_application._fileContentBrowser);
     },
 
-    'routerFileDict_/test/test_kite.html': function (request, response) {
+    'routerFileDict_/': function (request, response) {
       /* this function serves the file test.html */
       EXPORTS.serverRespondDefault(response, 200, 'text/html',
         EXPORTS.templateFormat(local._fileTestKiteHtml,
@@ -168,12 +182,19 @@
     },
 
     _fileTestKiteHtml: '<!DOCTYPE html><html><body>\n'
+      + '<h1>kiteykat test page</h1>\n'
+      + '<p>open the browser\'s javascript console to see test results</p>\n'
       + '<script>window.globalOverride = {{globalOverride}};</script>\n'
       + '<script src="/public/utility2-external/utility2-external.browser.lite.min.js"></script>\n'
       + '<script src="/public/utility2.js"></script>\n'
-      + '<script src="/lib/kite.js"></script>\n'
+      + '<script>state.isTest = 1;</script>\n'
+      + '<script src="/lib/kites.js"></script>\n'
       + '<script src="/test_application.js"></script>\n'
-      + '</body></html>\n'
+      + '</body></html>\n',
+
+    _phantomjs_test: function (onEventError) {
+      EXPORTS.phantomjsTestUrl('/', onEventError);
+    }
 
   };
   local._init();
