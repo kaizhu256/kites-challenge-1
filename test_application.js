@@ -69,7 +69,7 @@
       onEventError();
     },
 
-    _securityBasicAuthValidate: function () {
+    securityBasicAuthValidate: function () {
       /* disable mandatory password to access server from external network */
       return true;
     },
