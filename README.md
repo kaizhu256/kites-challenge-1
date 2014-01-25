@@ -14,7 +14,7 @@ console.log(output)  // S0-4:1100-2300;5-6:1100-2400
 Please also read [the FAQ](https://github.com/kites/kites-challenge-1/wiki).
 
 ## Deployed Webapp (heroku.com)
-#### [kites-challenge-1.herokuapp.com](kites-challenge-1.herokuapp.com)
+#### [kites-challenge-1.herokuapp.com](http://kites-challenge-1.herokuapp.com)
 ![alt text](https://raw.github.com/kaizhu256/kites-challenge-1/solution/public/build.herokuapp.com.png "https://raw.github.com/kaizhu256/kites-challenge-1/solution/public/build.herokuapp.com.png")
 
 ## Build Info (travis-ci.org)
