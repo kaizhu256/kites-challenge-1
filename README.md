@@ -13,6 +13,10 @@ console.log(output)  // S0-4:1100-2300;5-6:1100-2400
 
 Please also read [the FAQ](https://github.com/kites/kites-challenge-1/wiki).
 
+## Coverage info
+[https://coveralls.io/r/kaizhu256/kites-challenge-1](https://coveralls.io/r/kaizhu256/kites-challenge-1)
+![alt text](https://raw.github.com/kaizhu256/kites-challenge-1/master/public/build.coveralls.io.png "https://raw.github.com/kaizhu256/kites-challenge-1/master/public/build.coveralls.io.png")
+
 ## The Output Format
 
 The first thing you should do is read `test/index.js`. It is the **canonical reference**. As long as your parser correctly implements the reference tests, it is considered a correct solution.
