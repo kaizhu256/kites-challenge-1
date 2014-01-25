@@ -6,7 +6,7 @@
 , "scripts": {
     "lint": "node_modules/.bin/jshint lib test"
   , "start": "node test_application.js --repl --serverPort 8170"
-  , "test": "utility2=node_modules/utility2/utility2.js; $utility2 --npm-test-mode start --npm-test-script test_application.js  --timeout-default 8000 --timeout-exit 16000; $utility2 --coveralls; $utility2 --npm-test-mode end"
+  , "test": "utility2=node_modules/utility2/utility2.js; $utility2 --npm-test-mode start --npm-test-script test_application.js  --timeout-default 8000 --timeout-exit 16000; $utility2 --coveralls; $utility2 --npm-test-mode end; grunt test"
   }
 , "dependencies": {
     "underscore": "1.5.2"
