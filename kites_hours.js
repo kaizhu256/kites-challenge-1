@@ -8,33 +8,34 @@
 
 /*jslint browser: true, indent: 2, maxerr: 8, node: true, nomen: true, regexp: true, todo: true, unparam: true*/
 /*global EXPORTS, global, required, state, underscore, $*/
-(function moduleKitesShared() {
+(function moduleHoursShared() {
   /* this shared module exports the hours api to both nodejs and browser */
   "use strict";
 
   var local;
   local = {
 
-    _name: 'kites.moduleKites',
+    _name: 'kites_hours.moduleHoursShared',
 
     _init: function () {
+      local.exports = {
+        parse: local._parse
+      };
       EXPORTS.initModule(module, local);
+      required.kites_hours.parse = local._parse;
     },
 
     _initOnce: function () {
-      local.exports = {
-        parseHours: local.parseHours
-      };
       if (state.isNodejs) {
-        module.exports = local.exports;
-      } else if (state.isBrowser) {
-        global.kites = local.exports;
+        module.exports = {
+          parse: local._parse
+        };
       }
     },
 
-    parseHours: function (text) {
+    _parse: function (text) {
       text = local._tokenize(text);
-      text = local._parse(text);
+      text = local._generateOutput(text);
       return text;
     },
 
@@ -128,7 +129,7 @@
       return text;
     },
 
-    _parse: function (text) {
+    _generateOutput: function (text) {
       var dayList, hhmmDict, result, resultList;
       result = '';
       resultList = [];

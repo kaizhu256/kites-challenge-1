@@ -1,4 +1,4 @@
-[![Coverage Status](https://coveralls.io/repos/kaizhu256/kites-challenge-1/badge.png)](https://coveralls.io/r/kaizhu256/kites-challenge-1)
+[![Coverage Status](https://coveralls.io/repos/kaizhu256/kites-challenge-1/badge.png?branch=minimal)](https://coveralls.io/r/kaizhu256/kites-challenge-1?branch=minimal)
 [![Build Status](https://travis-ci.org/kaizhu256/kites-challenge-1.png)](https://travis-ci.org/kaizhu256/kites-challenge-1)
 [![Selenium Test Status](https://saucelabs.com/buildstatus/kites-opensauce)](https://saucelabs.com/u/kites-opensauce)
 [![Selenium Test Status](https://saucelabs.com/browser-matrix/kites-opensauce.svg)](https://saucelabs.com/u/kites-opensauce)
@@ -41,7 +41,7 @@ Some English notes:
 
 1. Clone this repository to your own Github public repository and development machine; do **NOT** fork, as other candidates would be able to see your solution
 2. Run `npm install`
-3. Implement `hours.parse` in `lib/index.js`
+3. Implement `hours.parse` in `kites_hours.js`
 4. Ensure all tests pass in node via `npm test`
 5. Ensure all tests pass in phantomjs and all browsers
 6. When finished, send us a link to the public repository you used
