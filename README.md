@@ -15,7 +15,7 @@ Please also read [the FAQ](https://github.com/kites/kites-challenge-1/wiki).
 
 ## Coverage info
 [https://coveralls.io/r/kaizhu256/kites-challenge-1](https://coveralls.io/r/kaizhu256/kites-challenge-1)
-![alt text](https://raw.github.com/kaizhu256/kites-challenge-1/master/public/build.coveralls.io.png "https://raw.github.com/kaizhu256/kites-challenge-1/master/public/build.coveralls.io.png")
+![alt text](https://raw.github.com/kaizhu256/kites-challenge-1/solution/public/build.coveralls.io.png "https://raw.github.com/kaizhu256/kites-challenge-1/solution/public/build.coveralls.io.png")
 
 ## The Output Format
 
