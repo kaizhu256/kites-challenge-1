@@ -70,6 +70,11 @@
       onEventError();
     },
 
+    _securityBasicAuthValidate: function () {
+      /* disable mandatory password to access server from external network */
+      return true;
+    },
+
     _Parses_simple_sentences_correctly_test: function (onEventError) {
       /* Parses simple sentences correctly */
       EXPORTS.assert(EXPORTS.parseHours('Sunday: 7:00 to 11:00') === 'S0:0700-1100');
