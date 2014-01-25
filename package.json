@@ -10,11 +10,11 @@
   }
 , "dependencies": {
     "underscore": "1.5.2"
+  , "utility2": "~2014.1.25"
   }
 , "devDependencies": {
     "mocha": "1.17.1"
   , "jshint": "2.3.0"
-  , "utility2": "~2014.1.25"
   }
 , "jshintConfig": {
     "eqeqeq": true
