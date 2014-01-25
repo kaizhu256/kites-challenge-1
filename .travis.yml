@@ -3,8 +3,8 @@ before_script:
   - git submodule update --init --recursive
 env:
   global:
-    - secure: 'vZMFMViJKnmErVkXEIVEGPxktWBcl1aVebVrc0SSkAGb9ts3J4J5ORucaXFt+LRPYvoa0pFeNwinP/pyDaAQ6l+8+e7ZYK49F6RThX2pAY7KRmNDUG6p/edRnGeMgQnPuRYlyGH2sybjA2lKajE3KSDZKAqIc0kXP/v/Zo5UoUE='
-    - secure: 'vQLC2y0aolQ9PWAZON8m9+fyAQEoEI/xk76HQ1CgiGeaUVOTbPaS9MPGOrHB+t+5RlpRLLJzifVcypZSbSYe0aYJ19kYkXWuBMvCUVxM6Q+xy06tV9v8J4ModVBviPIOWi8AN7L+7vPVReefFinjuECPwam/0adfy2KwVlkd18Q='
+    - secure: 'AaRHoLIODuSG8V1nJepdnu/SdYDrFAblki8+otpeErR789jZA8aEqSWLZN84Yq0Yf5i6hn5lWkI7rC/5KCCu/OfKgFu7VJy3gVTro7jml8XX6I3bEFBx8erHRV+dH4l5zoIzTvlrzUUF+P8A2AacvVfD2qjczQEPRa8tUUoM4tE='
+    - secure: 'QX6mTTgMgFsI1nV/VNBnfbUoeHOzJmUmzGCXvOC58g24Wp4FhS/e3MpBhi96L+eVuJ5B35qq979QpxIHwyro/q2JGjJl45yRsiInCE0SV6f+jncnOmp6M/vAASqeRnbPHs6EleANs+NFOET8+oxvzPnLXCsJxfq1qp9t3igdVrw='
 language: node_js
 node_js:
   - 0.10

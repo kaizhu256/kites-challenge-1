@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/travis-ci/travis-web.png)](http://travis-ci.org/kaizhu/kites-challenge-1)
-[![Selenium Test Status](https://saucelabs.com/buildstatus/kaizhu256-kites)](https://saucelabs.com/u/kaizhu256-kites)
-[![Selenium Test Status](https://saucelabs.com/browser-matrix/kaizhu256-kites.svg)](https://saucelabs.com/u/kaizhu256-kites)
+[![Selenium Test Status](https://saucelabs.com/buildstatus/kaizhu-kites)](https://saucelabs.com/u/kaizhu-kites)
+[![Selenium Test Status](https://saucelabs.com/browser-matrix/kaizhu-kites.svg)](https://saucelabs.com/u/kaizhu-kites)
 
 # Natural Language Hours Parsing
 
