@@ -22,6 +22,7 @@
     },
 
     _initNodejs: function () {
+      var override;
       if (!(global.process && process.versions && process.versions.node)) {
         return;
       }
@@ -31,6 +32,9 @@
       }
       global.state = global.state || {};
       state.isProcessArgv = true;
+      override = state.stateOverride = state.stateOverride || {};
+      override.serverPort = override.serverPort || Number(process.env.PORT) || undefined;
+      override.socks5SshHost = override.socks5SshHost || process.env.SOCKS5_SSH_HOST;
       /* require utility2 */
       require('utility2');
       /* require kites */
