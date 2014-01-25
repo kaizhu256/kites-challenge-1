@@ -5,7 +5,8 @@
 , "main": "lib/index.js"
 , "scripts": {
     "lint": "node_modules/.bin/jshint lib test"
-  , "test": "node_modules/.bin/mocha -u qunit -R spec test/*.js"
+  , "start": "node test_application.js --repl --serverPort 8170"
+  , "test": "utility2=node_modules/utility2/utility2.js; $utility2 --npm-test-mode start --npm-test-script test_application.js  --timeout-default 8000 --timeout-exit 16000; $utility2 --coveralls; $utility2 --npm-test-mode end"
   }
 , "dependencies": {
     "underscore": "1.5.2"
@@ -13,6 +14,7 @@
 , "devDependencies": {
     "mocha": "1.17.1"
   , "jshint": "2.3.0"
+  , "utility2": "~2014.1.25"
   }
 , "jshintConfig": {
     "eqeqeq": true
