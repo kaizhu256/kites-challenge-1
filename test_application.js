@@ -214,7 +214,7 @@
     },
 
     _fileTestKiteHtml: '<!DOCTYPE html><html><body>\n'
-      + '<h1>kiteykat test page</h1>\n'
+      + '<h1>kites-challenge-1 test page</h1>\n'
       + '<p>open the browser\'s javascript console to see test results</p>\n'
       + '<script>window.globalOverride = {{globalOverride}};</script>\n'
       + '<script src="/public/utility2-external/utility2-external.browser.lite.min.js"></script>\n'
