@@ -3,8 +3,9 @@ before_script:
   - git submodule update --init --recursive
 env:
   global:
-    - secure: 'AaRHoLIODuSG8V1nJepdnu/SdYDrFAblki8+otpeErR789jZA8aEqSWLZN84Yq0Yf5i6hn5lWkI7rC/5KCCu/OfKgFu7VJy3gVTro7jml8XX6I3bEFBx8erHRV+dH4l5zoIzTvlrzUUF+P8A2AacvVfD2qjczQEPRa8tUUoM4tE='
-    - secure: 'QX6mTTgMgFsI1nV/VNBnfbUoeHOzJmUmzGCXvOC58g24Wp4FhS/e3MpBhi96L+eVuJ5B35qq979QpxIHwyro/q2JGjJl45yRsiInCE0SV6f+jncnOmp6M/vAASqeRnbPHs6EleANs+NFOET8+oxvzPnLXCsJxfq1qp9t3igdVrw='
+    ## SAUCE_USERNAME kites-opensauce
+    - secure: 'S4wilT+YiqG+zCwLJ6XHEdbot8xdjuZ9TMkL1t0nfO8DzDqalwXii80hL0CrHOEkKUDvj6RHRgS/DZNlJmWGxsUT3r2dShzZcyRYS8pm4uuBGyb52lZqnBEB0//gnWoV4XmTmGjiLF0YeB6y6V3vRxU174+1JmEXYa063cToG6Q='
+    - secure: 'Ofw0dpSd9/BQYgMC4WInlzn4yRZv9yyGY8nv9kW2vcb/kNCo5KpzX7sXJSP9Rcmx7fp3bXVBXDGgD46i9F8bsh2Zpzd8gqOoq1Gg/S8pzENy/h93Na5MZ3J4jk0g93fmMrb+hMm0b/DOKzco7w8V/uoE9nKn8YpRiqJtqRg3w2o='
 language: node_js
 node_js:
   - 0.10

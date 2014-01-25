@@ -1,4 +1,5 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
+    'use strict';
     var browsers = [{
         browserName: "firefox",
         version: "19",
@@ -41,9 +42,11 @@ module.exports = function(grunt) {
     });
 
     // Loading dependencies
-    for (var key in grunt.file.readJSON("package.json").devDependencies) {
-        if (key !== "grunt" && key.indexOf("grunt") === 0) grunt.loadNpmTasks(key);
-    }
+    Object.keys(grunt.file.readJSON("package.json").devDependencies).forEach(function (key) {
+        if (key !== "grunt" && key.indexOf("grunt") === 0) {
+            grunt.loadNpmTasks(key);
+        }
+    });
 
     grunt.registerTask("dev", ["connect", "watch"]);
     grunt.registerTask("test", ["connect", "saucelabs-qunit"]);

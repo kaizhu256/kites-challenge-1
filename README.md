@@ -1,6 +1,7 @@
-[![Build Status](https://travis-ci.org/travis-ci/travis-web.png)](http://travis-ci.org/kaizhu/kites-challenge-1)
-[![Selenium Test Status](https://saucelabs.com/buildstatus/kaizhu-kites)](https://saucelabs.com/u/kaizhu-kites)
-[![Selenium Test Status](https://saucelabs.com/browser-matrix/kaizhu-kites.svg)](https://saucelabs.com/u/kaizhu-kites)
+[![Coverage Status](https://coveralls.io/repos/kaizhu256/kites-challenge-1/badge.png)](https://coveralls.io/r/kaizhu256/kites-challenge-1)
+[![Build Status](https://travis-ci.org/kaizhu256/kites-challenge-1.png)](https://travis-ci.org/kaizhu256/kites-challenge-1)
+[![Selenium Test Status](https://saucelabs.com/buildstatus/kites-opensauce)](https://saucelabs.com/u/kites-opensauce)
+[![Selenium Test Status](https://saucelabs.com/browser-matrix/kites-opensauce.svg)](https://saucelabs.com/u/kites-opensauce)
 
 # Natural Language Hours Parsing
 
@@ -20,14 +21,6 @@ Please also read [the FAQ](https://github.com/kites/kites-challenge-1/wiki).
 ## Deployed Webapp (heroku.com)
 #### [kites-challenge-1.herokuapp.com](http://kites-challenge-1.herokuapp.com)
 ![alt text](https://raw.github.com/kaizhu256/kites-challenge-1/solution/public/build.herokuapp.com.png "https://raw.github.com/kaizhu256/kites-challenge-1/solution/public/build.herokuapp.com.png")
-
-## Npm Test Statistics (travis-ci.org)
-#### [https://travis-ci.org/kaizhu256/kites-challenge-1](https://travis-ci.org/kaizhu256/kites-challenge-1)
-![alt text](https://raw.github.com/kaizhu256/kites-challenge-1/solution/public/build.travis-ci.org.png "https://raw.github.com/kaizhu256/kites-challenge-1/solution/public/build.travis-ci.org.png")
-
-## Code Coverage Statistics (coveralls.io)
-#### [https://coveralls.io/r/kaizhu256/kites-challenge-1](https://coveralls.io/r/kaizhu256/kites-challenge-1)
-![alt text](https://raw.github.com/kaizhu256/kites-challenge-1/solution/public/build.coveralls.io.png "https://raw.github.com/kaizhu256/kites-challenge-1/solution/public/build.coveralls.io.png")
 
 ## Multi Browser Test Statistics (saucelabs.com)
 #### TODO

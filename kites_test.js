@@ -8,11 +8,11 @@
 
 
 (function moduleInitShared() {
-  /* this shared module inits test_application */
+  /* this shared module inits kites_test */
   'use strict';
   var local = {
 
-    _name: 'test_application.moduleInitShared',
+    _name: 'kites_test.moduleInitShared',
 
     _init: function () {
       /* init nodejs */
@@ -56,7 +56,7 @@
   'use strict';
   var local = {
 
-    _name: 'test_application.moduleTestShared',
+    _name: 'kites_test.moduleTestShared',
 
     _init: function () {
       EXPORTS.initModule(module, local);
@@ -171,7 +171,7 @@
   'use strict';
   var local = {
 
-    _name: 'test_application.moduleTestServerNodejs',
+    _name: 'kites_test.moduleTestServerNodejs',
 
     _init: function () {
       if (!state.isNodejs) {
@@ -194,15 +194,15 @@
     },
 
     'routerFileDict_/lib/kites.js': function (request, response) {
-      /* this function serves the file test_application.js */
+      /* this function serves the file kites_test.js */
       EXPORTS.serverRespondDefault(response, 200, 'application/javascript; charset=utf-8',
         required.kites._fileContentBrowser);
     },
 
-    'routerFileDict_/test_application.js': function (request, response) {
-      /* this function serves the file test_application.js */
+    'routerFileDict_/kites_test.js': function (request, response) {
+      /* this function serves the file kites_test.js */
       EXPORTS.serverRespondDefault(response, 200, 'application/javascript; charset=utf-8',
-        required.test_application._fileContentBrowser);
+        required.kites_test._fileContentBrowser);
     },
 
     'routerFileDict_/': function (request, response) {
@@ -222,7 +222,7 @@
       + '<script src="/public/utility2.js"></script>\n'
       + '<script>state.isTest = 1;</script>\n'
       + '<script src="/lib/kites.js"></script>\n'
-      + '<script src="/test_application.js"></script>\n'
+      + '<script src="/kites_test.js"></script>\n'
       + '</body></html>\n',
 
     _phantomjs_test: function (onEventError) {
