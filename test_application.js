@@ -61,46 +61,73 @@
       EXPORTS.initModule(module, local);
     },
 
-    _null_test: function (onEventError) {
-      EXPORTS.assert(EXPORTS.parseHours('7:00') === '');
-      EXPORTS.assert(EXPORTS.parseHours('7:00 to 11:00') === '');
-      onEventError();
-    },
-
     securityBasicAuthValidate: function () {
       /* disable mandatory password to access server from external network */
       return true;
     },
 
+    _extra_psrse_am_pm_correctly_test: function (onEventError) {
+      /* extra parse am / pm correctly */
+      EXPORTS.assert(EXPORTS.parseHours('7:00') === '');
+      EXPORTS.assert(EXPORTS.parseHours('7:00 to 11:00') === '');
+      EXPORTS.assert(EXPORTS.parseHours('Sunday: 7:00 am to 11:00 pm') === 'S0:0700-2300');
+      onEventError();
+    },
+
     _Parses_simple_sentences_correctly_test: function (onEventError) {
       /* Parses simple sentences correctly */
       EXPORTS.assert(EXPORTS.parseHours('Sunday: 7:00 to 11:00') === 'S0:0700-1100');
-      EXPORTS.assert(EXPORTS.parseHours('Sunday: 7:00 am to 11:00 pm') === 'S0:0700-2300');
       EXPORTS.assert(EXPORTS.parseHours('Sunday: 15:00 to 1:00') === 'S0:1500-2500');
       EXPORTS.assert(EXPORTS.parseHours('Sun: 07:00-00:00') === 'S0:0700-2400');
       onEventError();
     },
 
-    _parsesTHROUGH_sentences_correctly_test: function (onEventError) {
+    _Parses_THROUGH_sentences_correctly_test: function (onEventError) {
       /* Parses THROUGH sentences correctly */
-      EXPORTS.assert(EXPORTS.parseHours('Mon-Sun\nBreakfast 07:00-11:00\nLunch 11:30-14:30\nTea 14:00-18:00\nSun-Thu Dinner 18:30-22:30\nFri & Sat Dinner 18:30-23:30') === 'S0-4:0700-1100,1130-1800,1830-2230;5-6:0700-1100,1130-1800,1830-2330');
-      EXPORTS.assert(EXPORTS.parseHours('Sunday: 7:00 to 11:00') === 'S0:0700-1100');
-      EXPORTS.assert(EXPORTS.parseHours('Sunday: 15:00 to 1:00') === 'S0:1500-2500');
-      EXPORTS.assert(EXPORTS.parseHours('Sun: 07:00-00:00') === 'S0:0700-2400');
       EXPORTS.assert(EXPORTS.parseHours('Mon-Sun: 12:30-01:00') === 'S0-6:1230-2500');
       EXPORTS.assert(EXPORTS.parseHours('Mon to Sun: 06:30 - 22:30') === 'S0-6:0630-2230');
       EXPORTS.assert(EXPORTS.parseHours('Fri to Tue: 06:30 - 22:30') === 'S5-2:0630-2230');
       EXPORTS.assert(EXPORTS.parseHours('Mon - Wed: 07:00-01:00') === 'S1-3:0700-2500');
+      onEventError();
+    },
+
+    _Parses_AND_sentences_correctly_test: function (onEventError) {
+      /* Parses AND sentences correctly */
       EXPORTS.assert(EXPORTS.parseHours('Mon-Thu & Sun: 09:30-22:30') === 'S0-4:0930-2230');
       EXPORTS.assert(EXPORTS.parseHours('Fri-Sat & PH: 09:30-23:00') === 'S5-6:0930-2300');
+      onEventError();
+    },
+
+    _Parses_sentences_with_multiple_times_correctly_test: function (onEventError) {
+      /* Parses sentences with multiple times correctly */
       EXPORTS.assert(EXPORTS.parseHours('Mon-Fri: 11:45-16:30; 17:45-23:30') === 'S1-5:1145-1630,1745-2330');
       EXPORTS.assert(EXPORTS.parseHours('Monday to Sunday: 12:00-15:00, 18:00-22:00') === 'S0-6:1200-1500,1800-2200');
+      onEventError();
+    },
+
+    _Deals_with_strange_Unicode_characters_correctly_test: function (onEventError) {
+      /* Deals with strange Unicode characters correctly */
       EXPORTS.assert(EXPORTS.parseHours('Mon：18:00-00:00') === 'S1:1800-2400');
       EXPORTS.assert(EXPORTS.parseHours('Sat & Sun: 12:00-14:30；18:00-23:00') === 'S6-0:1200-1430,1800-2300');
       EXPORTS.assert(EXPORTS.parseHours('Mon to Fri: 6:30 – 20:30') === 'S1-5:0630-2030');
+      onEventError();
+    },
+
+    _Tokenizes_multiline_hours_correctly_test: function (onEventError) {
+      /* Tokenizes multiline hours correctly */
       EXPORTS.assert(EXPORTS.parseHours('Mon.-Sat.: 11:30-22:30; Sun.: 10:30-22:30') === 'S0:1030-2230;1-6:1130-2230');
       EXPORTS.assert(EXPORTS.parseHours('Sun.-Thur. 11:00-23:00, Fri.-Sat. 11:00-00:00') === 'S0-4:1100-2300;5-6:1100-2400');
+      onEventError();
+    },
+
+    _Parses_complex_sentences_correctly_test: function (onEventError) {
+      /* Parses complex sentences correctly */
       EXPORTS.assert(EXPORTS.parseHours('Mon-Sun\nBreakfast 07:00-11:00\nLunch 11:30-14:30\nTea 14:00-18:00\nSun-Thu Dinner 18:30-22:30\nFri & Sat Dinner 18:30-23:30') === 'S0-4:0700-1100,1130-1800,1830-2230;5-6:0700-1100,1130-1800,1830-2330');
+      onEventError();
+    },
+
+    _Custom_tests_test: function (onEventError) {
+      /* Custom tests */
       EXPORTS.assert(EXPORTS.parseHours('Mon-Sun: 06:00-23:00\n(Tea: 06:00-16:00)') === 'S0-6:0600-2300');
       EXPORTS.assert(EXPORTS.parseHours('Mon-Sat: 11:00-21:00 until 300 quotas soldout') === 'S1-6:1100-2100');
       EXPORTS.assert(EXPORTS.parseHours('Monday to Sunday & Public Holiday:\n12:00-15:00, 18:00-00:00') === 'S0-6:1200-1500,1800-2400');
@@ -109,6 +136,11 @@
       EXPORTS.assert(EXPORTS.parseHours('Mon-Sat: 0000-2300,2301-2800') === 'S1-6:0000-2300,2301-2800');
       EXPORTS.assert(EXPORTS.parseHours('Fri-Sat: 0000-2300, Mon: 0000-2300') === 'S1,5-6:0000-2300');
       EXPORTS.assert(EXPORTS.parseHours('Fri-Sat: 0000-2300, Mon: 0000-2301') === 'S1:0000-2301;5-6:0000-2300');
+      onEventError();
+    },
+
+    _Chinese_test: function (onEventError) {
+      /* Chinese */
       EXPORTS.assert(EXPORTS.parseHours('Mon.-Sun.: 12:00-22:30') === 'S0-6:1200-2230');
       EXPORTS.assert(EXPORTS.parseHours('星期一至日: 12:00-22:30') === 'S0-6:1200-2230');
       EXPORTS.assert(EXPORTS.parseHours('Mon.-Sat.: 12:00-23:00') === 'S1-6:1200-2300');
