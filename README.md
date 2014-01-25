@@ -13,6 +13,21 @@ console.log(output)  // S0-4:1100-2300;5-6:1100-2400
 
 Please also read [the FAQ](https://github.com/kites/kites-challenge-1/wiki).
 
+## Deployed Webapp (heroku.com)
+#### [kites-challenge-1.herokuapp.com](http://kites-challenge-1.herokuapp.com)
+![alt text](https://raw.github.com/kaizhu256/kites-challenge-1/solution/public/build.herokuapp.com.png "https://raw.github.com/kaizhu256/kites-challenge-1/solution/public/build.herokuapp.com.png")
+
+## Npm Test Statistics (travis-ci.org)
+#### [https://travis-ci.org/kaizhu256/kites-challenge-1](https://travis-ci.org/kaizhu256/kites-challenge-1)
+![alt text](https://raw.github.com/kaizhu256/kites-challenge-1/solution/public/build.travis-ci.org.png "https://raw.github.com/kaizhu256/kites-challenge-1/solution/public/build.travis-ci.org.png")
+
+## Code Coverage Statistics (coveralls.io)
+#### [https://coveralls.io/r/kaizhu256/kites-challenge-1](https://coveralls.io/r/kaizhu256/kites-challenge-1)
+![alt text](https://raw.github.com/kaizhu256/kites-challenge-1/solution/public/build.coveralls.io.png "https://raw.github.com/kaizhu256/kites-challenge-1/solution/public/build.coveralls.io.png")
+
+## Multi Browser Test Statistics (saucelabs.com)
+#### TODO
+
 ## The Output Format
 
 The first thing you should do is read `test/index.js`. It is the **canonical reference**. As long as your parser correctly implements the reference tests, it is considered a correct solution.
