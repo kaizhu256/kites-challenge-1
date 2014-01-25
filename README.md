@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/travis-ci/travis-web.png)](http://travis-ci.org/kaizhu/kites-challenge-1)
+[![Selenium Test Status](https://saucelabs.com/buildstatus/kaizhu256-kites)](https://saucelabs.com/u/kaizhu256-kites)
+[![Selenium Test Status](https://saucelabs.com/browser-matrix/kaizhu256-kites.svg)](https://saucelabs.com/u/kaizhu256-kites)
+
 # Natural Language Hours Parsing
 
 The goal of this challenge is to create a parser that can read store opening hours written by a human and produce a machine-readable canonical (structured) representation.
