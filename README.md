@@ -17,15 +17,15 @@ Please also read [the FAQ](https://github.com/kites/kites-challenge-1/wiki).
 #### [kites-challenge-1.herokuapp.com](http://kites-challenge-1.herokuapp.com)
 ![alt text](https://raw.github.com/kaizhu256/kites-challenge-1/solution/public/build.herokuapp.com.png "https://raw.github.com/kaizhu256/kites-challenge-1/solution/public/build.herokuapp.com.png")
 
-## Build Info (travis-ci.org)
+## Npm Test Statistics (travis-ci.org)
 #### [https://travis-ci.org/kaizhu256/kites-challenge-1](https://travis-ci.org/kaizhu256/kites-challenge-1)
 ![alt text](https://raw.github.com/kaizhu256/kites-challenge-1/solution/public/build.travis-ci.org.png "https://raw.github.com/kaizhu256/kites-challenge-1/solution/public/build.travis-ci.org.png")
 
-## Code Coverage Info (coveralls.io)
+## Code Coverage Statistics (coveralls.io)
 #### [https://coveralls.io/r/kaizhu256/kites-challenge-1](https://coveralls.io/r/kaizhu256/kites-challenge-1)
 ![alt text](https://raw.github.com/kaizhu256/kites-challenge-1/solution/public/build.coveralls.io.png "https://raw.github.com/kaizhu256/kites-challenge-1/solution/public/build.coveralls.io.png")
 
-## Multi Browser Tests (saucelabs.com)
+## Multi Browser Test Statistics (saucelabs.com)
 #### TODO
 
 ## The Output Format
