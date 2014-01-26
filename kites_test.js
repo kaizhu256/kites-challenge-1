@@ -91,6 +91,7 @@
 
     _init: function () {
       utility2.initModule(module, local);
+      utility2.securityBasicAuthValidate = local.securityBasicAuthValidate
     },
 
     securityBasicAuthValidate: function () {
