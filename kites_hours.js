@@ -7,7 +7,7 @@
  ******************************************************************************/
 
 /*jslint browser: true, indent: 2, maxerr: 8, node: true, nomen: true, regexp: true, todo: true, unparam: true*/
-/*global EXPORTS, global, required, state, underscore, $*/
+/*global global, required, state, utility2, $*/
 (function moduleHoursShared() {
   /* this shared module exports the hours api to both nodejs and browser */
   "use strict";
@@ -18,22 +18,16 @@
     _name: 'kites_hours.moduleHoursShared',
 
     _init: function () {
-      local.exports = {
-        parse: local._parse
-      };
-      EXPORTS.initModule(module, local);
-      required.kites_hours.parse = local._parse;
-    },
-
-    _initOnce: function () {
-      if (state.isNodejs) {
-        module.exports = {
-          parse: local._parse
-        };
+      if (typeof require === 'function') {
+        require('utility2');
+      }
+      utility2.initModule(module, local);
+      if (typeof module === 'object') {
+        module.exports = required.kites_hours;
       }
     },
 
-    _parse: function (text) {
+    parse: function (text) {
       text = local._tokenize(text);
       text = local._generateOutput(text);
       return text;
