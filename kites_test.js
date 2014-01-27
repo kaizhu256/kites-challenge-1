@@ -29,25 +29,12 @@
       if (!(state.isBrowser && QUnit)) {
         return;
       }
-      // global.global_test_results = null;
-      // setTimeout(function () {
-        // global.global_test_results = { failed: 0, passed: 1, total: 1, runtime: 44 };
-      // }, 8000);
-      // QUnit.done(function (results) {
-        // debugPrint('done', results);
-        // // global.global_test_results = results;
-      // });
-
       QUnit.asyncTest("test report", function () {
-        setTimeout(function () {
-          QUnit.ok(true, "Passed!");
+        utility2.deferCallback('untilTestReportReady', 'defer', function () {
+          QUnit.ok(!state.testReport.failures);
           QUnit.start();
-        }, 8000);
+        });
       });
-
-      // QUnit.test("hello test2", function () {
-        // QUnit.ok(true, "Passed2!");
-      // });
 
     },
 
@@ -91,7 +78,7 @@
 
     _init: function () {
       utility2.initModule(module, local);
-      utility2.securityBasicAuthValidate = local.securityBasicAuthValidate
+      utility2.securityBasicAuthValidate = local.securityBasicAuthValidate;
     },
 
     securityBasicAuthValidate: function () {
@@ -262,13 +249,12 @@
       + '<script src="/public/utility2-external/utility2-external.browser.lite.min.js"></script>\n'
       + '<script src="/external.qunit.min.js"></script>\n'
       + '<script src="/public/utility2.js"></script>\n'
-      + '<script>state.isTest = 1;</script>\n'
       + '<script src="/kites_hours.js"></script>\n'
       + '<script src="/kites_test.js"></script>\n'
       + '</body></html>\n',
 
     _phantomjs_test: function (onEventError) {
-      utility2.phantomjsTestUrl('/', onEventError);
+      utility2.phantomjsTestUrl('/test.html#testOnce=1', onEventError);
     }
 
   };
