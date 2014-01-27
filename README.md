@@ -1,3 +1,8 @@
+<!-- [![Coverage Status](https://coveralls.io/repos/kaizhu256/kites-challenge-1/badge.png?branch=minimal)](https://coveralls.io/r/kaizhu256/kites-challenge-1?branch=minimal) -->
+[![Build Status](https://travis-ci.org/kaizhu256/kites-challenge-1.png)](https://travis-ci.org/kaizhu256/kites-challenge-1)
+[![Selenium Test Status](https://saucelabs.com/buildstatus/kites-opensauce)](https://saucelabs.com/u/kites-opensauce)
+[![Selenium Test Status](https://saucelabs.com/browser-matrix/kites-opensauce.svg)](https://saucelabs.com/u/kites-opensauce)
+
 # Natural Language Hours Parsing
 
 The goal of this challenge is to create a parser that can read store opening hours written by a human and produce a machine-readable canonical (structured) representation.
