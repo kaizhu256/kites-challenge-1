@@ -5,7 +5,7 @@
 , "main": "lib/index.js"
 , "scripts": {
     "lint": "node_modules/.bin/jshint lib test"
-  , "test": "node_modules/.bin/zuul-mp -- test/*.js && node_modules/.bin/zuul -- test/*.js"
+  , "test": "node_modules/.bin/mocha -u qunit -R spec test/*.js && node_modules/.bin/zuul-mp -- test/*.js && node_modules/.bin/zuul -- test/*.js"
   }
 , "dependencies": {
     "underscore": "1.5.2"
