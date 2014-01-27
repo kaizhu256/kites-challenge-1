@@ -125,7 +125,7 @@
   cases = {
     // this test fails : (
     // 'Sunday: 7:00am to 11:00pm': 'S0:0700-2300'
-  , 'Sunday: 7:00 am to 11:00 pm': 'S0:0700-2300'
+    'Sunday: 7:00 am to 11:00 pm': 'S0:0700-2300'
   }
   _.each(cases, check)
 
