@@ -202,6 +202,18 @@
     _initOnce: function () {
       /* require kites */
       required.kites_hours = require('./kites_hours.js');
+      /* saucelabs test */
+      if (state.npmTestMode === 'running') {
+        utility2.shell('node_modules/.bin/grunt test --verbose --state-override-base64='
+          + utility2.base64Encode(JSON.stringify({
+            localhost: state.localhost
+          })));
+      }
+      /* auto jslint / eval / etc ... for the following files if modified */
+      [
+        { action: ['lint'], name: 'Gruntfile.js' },
+        { action: ['lint'], name: 'package.json' }
+      ].forEach(utility2.fsWatch);
     },
 
     _initTest: function () {
